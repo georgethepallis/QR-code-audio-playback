@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auto Speech</title>
+  </head>
+  <body>
+    <audio autoplay>
+      <source src="POU_SAI_DIO.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+      window.onload = function () {
+        const msg = new SpeechSynthesisUtterance(
+          "Hello, welcome! This is your AI speaking."
+        );
+        msg.lang = "en-US";
+        // Try to speak right away
+        speechSynthesis.speak(msg);
+      };
+    </script>
+  </body>
+</html>
